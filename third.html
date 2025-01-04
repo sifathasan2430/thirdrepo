@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Example</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .box {
+            width: 100%;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border: 5px solid #388E3C;
+            margin: 20px 0;
+        }
+
+        .box::before {
+            content: "Content Box";
+            display: block;
+            color: black;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .outer-box {
+            width: 100%;
+            background-color: #FFEB3B;
+            padding: 40px;
+            border: 5px solid #FBC02D;
+            margin: 10px 0;
+        }
+
+        .inner-box {
+            width: 100%;
+            background-color: #FF5722;
+            padding: 30px;
+            border: 3px solid #E64A19;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Box Model Example</h1>
+
+        <div class="box">
+            <p>This is the content inside a box.</p>
+        </div>
+
+        <div class="outer-box">
+            <div class="inner-box">
+                <p>Nested Boxes! This box is inside the outer box.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
